@@ -22,65 +22,33 @@
       <p><a href="contact@vtalkcorporate.com "><i class="fa fa-envelope-o"
             aria-hidden="true"></i><b>contact@vtalkcorporate.com </b></a></p>
     </div>
-    <div id="full">
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-
-      </label>
-      <div class="vtalk">
-        <img src="logo.png" alt="img" style="width: 50%;">
+    <nav class="navbar">
+      <div>
+          <a href=""><img class="logo" src="logo.png" alt="logo"></a>
       </div>
-      <div class="cm-e-menu">
-        <ul>
-          <li class="topmenu">
-            <a href="home.html" class="active">HOME</a>
-
-          <li class="topmenu">
-            <a href="about.html">ABOUT US </a>
-          <li class="topmenu">
-            <a>PROGRAM</a>
-            <ul class="submenu">
-              <li>
-                <a>DIPLOMA</a>
-                <ul class="submenu">
-                  <li><a href="account.html">E-ACCOUNTING</a></li>
-                  <li><a href="dca.html">DCA</a></li>
-                  <li><a href="ntt.html">NTT/PTT</a></li>
-                </ul>
-              </li>
-              <li>
-                <a>SHORT SKILL</a>
-                <ul class="submenu">
-                  <li><a href="spoken.html">SPOKEN ENGLISH</a></li>
-                  <li><a href="">PERSONLITY DEVELOPMENT</a></li>
-                </ul>
-              </li>
-              <li>
-                <a>SHORT TERM</a>
-                <ul class="submenu">
-                  <li><a href="digtal.html">DIGITAL MARKETING</a></li>
-                  <li><a href="Basic.html">BASIC COMPUTER</a></li>
-                  <li><a href="tally.html">TALLY</a></li>
-                  <li><a href="gst.html">GST</a></li>
-                  <li><a href="income.html">INCOME TAX</a></li>
-                  <li><a href="buzy.html">BUZY</a></li>
-                </ul>
-              </li>
-            </ul>
+      <ul class="nav-list" id="navi-list">
+          <li class="list-item">
+              <a href="#"  class="active1">HOME</a>
           </li>
-          <li class="topmenu">
-            <a href="blog.html">BLOG</a>
+          <li class="list-item">
+              <a href="#">ABOUT US</a>
           </li>
-          <li class="topmenu">
-            <a href="admission.html">ADMISSION FORM</a>
+          <li class="list-item">
+              <a href="#">PROGRAM</a>
           </li>
-          <li class="topmenu">
-            <a href="content.html">CONTACT US</a>
+          <li class="list-item">
+              <a href="#">CONTACT US</a>
           </li>
-        </ul>
-      </div>
-    </div>
+          <li class="list-item">
+              <a href="#">ADMISSION FORM</a>
+          </li>
+      </ul>
+          </nav>
+          <div class="menu" id="toggle-button">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
     <div id="slider">
       <figure>
         <img src="bk.jpg" alt>
@@ -267,6 +235,14 @@
       </div>
   </footer>
   </container1>
+  <script>
+    const toggleButton = document.getElementById('toggle-button');
+    const naviList = document.getElementById('navi-list'); 
+
+    toggleButton.addEventListener('click', () => {
+     naviList.classList.toggle('active');
+    })
+</script>
 </body>
 
 </html>

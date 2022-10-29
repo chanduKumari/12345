@@ -36,117 +36,98 @@
 .active {
   color: #002b64;
 }
+.logo {
+  height: 50px;
+}
 
-.cm-e-menu {
+.navbar {
   background-color: white;
-  margin-left: 548px;
-  position: relative;
-  margin-top: -78px;
-  z-index: 1000;
-  color: black;
-  font-weight: 200;
-
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Bebas', Helvetica, Arial, Lucida, sans-serif;
 }
 
-.cm-e-menu ul {
-  margin: 0;
-  padding: 0;
+.nav-list {
+  list-style-type: none;
 }
 
-.cm-e-menu li {
-  position: relative;
-  font-size: 12px;
-  white-space: nowrap;
-  cursor: pointer;
-  text-transform: capitalize !important;
-  list-style: none;
-
-  -webkit-transition: background-color ease-in 300ms;
-  -moz-transition: background-color ease-in 300ms;
-  -ms-transition: background-color ease-in 300ms;
-  -o-transition: background-color ease-in 300ms;
-  transition: background-color ease-in 300ms;
+.nav-list .list-item {
+  display: inline-block;
+  padding: 30px 10px;
 }
 
-.cm-e-menu li:hover {
-  background-color: rgb(238, 235, 235);
-  text-shadow: 0 10px 10px rgb(250, 246, 246);
-}
-
-.cm-e-menu ul li.topmenu {
-  display: inline-table;
-  padding: 17px;
-  padding-left: 6px;
-  margin-bottom: 24px;
-}
-
-.cm-e-menu .topmenu ul {
-  display: none;
-  position: absolute;
-  background-color: white;
-}
-
-.cm-e-menu li:hover>ul {
-  display: table;
-}
-
-.cm-e-menu ul.submenu {
-  top: 100%;
-  left: 0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-
-}
-
-.cm-e-menu ul.submenu .submenu {
-  top: -0.5em;
-  left: 100%;
-  font-size: 1em;
-}
-
-.cm-e-menu ul.submenu li {
-  padding: 1.2em 3.5em;
-  font-size: 0.9rem;
-}
-
-.cm-e-menu li.divider {
-  padding: 0;
-  border-top: 1px solid gray;
-  margin: 0.5rem auto 0.3rem;
-  cursor: default;
-}
-
-.cm-e-menu li.divider:hover {
-  background-color: transparent;
-}
-
-.vtalk {
-  background-color: white;
-  max-width: 394px;
-  width: 40%;
-  padding: 15px 2px;
-  margin-top: 2px;
-  position: inherit;
-  margin-left: 148px;
-}
-
-.cm-e-menu ul.submenu a {
+.navbar a {
+  color: #00000099;
   text-decoration: none;
-  color: black;
 }
 
-.checkbtn {
-  color: black;
-  font-size: 25px;
-  cursor: pointer;
-  float: right;
+.navbar a:hover {
+  color: blue;
+}
+.active1{
+  color: #002b64;
+}
+
+.menu {
   display: none;
 }
 
-#check {
-  display: none;
+.menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: #2ea3f2;
+  margin-bottom: 4px;
 }
 
+@media all and (max-width:981px) {
+  .navbar {
+      flex-direction: column;
+      position: sticky;
+
+  }
+
+  .menu {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 20px;
+  }
+
+  .nav-list {
+      list-style-type: none;
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
+      display: none;
+
+  }
+
+  .nav-list .list-item {
+      display: block;
+      background-color: white;
+      color: #666;
+      border-bottom: 2px solid black(0,0,0,.03);
+      width: 80%;
+      float: right;
+      margin-right: 8%;
+  }
+
+  .logo {
+      position: sticky;
+      float: left;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+  }
+
+  .active {
+      display: block;
+  }
+}
 @keyframes slidy {
   0% {
     left: 0%;
@@ -616,6 +597,7 @@ ul {
 ************/
 
 
+/* for large */
   @media only screen and (max-width: 479px) {
     #container {
       margin-left: -161px;
@@ -735,7 +717,7 @@ ul {
       float: left;
     }
   }
-
+/* for tablet */
   @media only screen and (max-width: 991px) {
     #container {
       width: 101%;
@@ -794,68 +776,9 @@ ul {
       margin-right: -36px;
     }
   }
-
-  @media only screen and (max-width: 425px) {
-    #container {
-      width: 192%;
-      padding: 13px;
-    }
-
-    .vtalk {
-      max-width: 645px;
-      width: 80%;
-      margin-left: 21px;
-    }
-
-    .img {
-      width: 543px;
-    }
-
-    #Aontainer {
-      width: 141vmin;
-      left: 75%;
-    }
-
-    #AOntainer {
-      margin-top: 512px;
-      width: 141vmin;
-      left: 75%;
-    }
-
-    #AONtainer {
-      margin-top: 947px;
-      width: 141vmin;
-      left: 75%;
-    }
-
-    #AONTainer {
-      margin-top: 1363px;
-      width: 141vmin;
-      left: 75%;
-    }
-
-    .album h3 {
-      margin-top: 384%;
-    }
-
-    .video iframe {
-      width: 175%;
-      height: 315px;
-      padding: 10px;
-    }
-
-    .footer-col1 {
-      margin-left: 70px;
-      width: 125%;
-      margin-right: -187px;
-    }
-
-    .footer-col {
-      width: 32%;
-      margin-left: 272px;
-      margin-right: -183px;
-    }
-  }
+/* for small */
+  
+  /* more small */
 
   @media only screen and (max-width: 375px) {
     #container {
@@ -947,7 +870,7 @@ ul {
       padding: 15px;
     }
   }
-
+/* tablet */
   @media only screen and (max-width: 768px) {
     #container {
       width: 102%;
@@ -977,6 +900,7 @@ ul {
       left: 74%;
     }
   }
+  /* tab */
   @media only screen and (max-width: 539px) {
     #container {
       width: 104%;
@@ -1040,4 +964,85 @@ img {
 .footer {
   width: 104%;
 }
+  }
+
+
+  @media only screen and (max-width: 425px) {
+    #container {
+      width: 192%;
+      padding: 13px;
+    }
+
+    .vtalk {
+      max-width: 645px;
+      width: 103%;
+      margin-left: 21px;
+    }
+    div#slider {
+      overflow: hidden;
+      width: 155%;
+  }
+  .cul {
+    width: 155%;
+}
+
+    .img {
+      width: 570px;
+    }
+
+    #Aontainer {
+      width: 141vmin;
+      left: 75%;
+    }
+
+    #AOntainer {
+      margin-top: 512px;
+      width: 141vmin;
+      left: 75%;
+    }
+
+    #AONtainer {
+      margin-top: 947px;
+      width: 141vmin;
+      left: 75%;
+    }
+
+    #AONTainer {
+      margin-top: 1363px;
+      width: 141vmin;
+      left: 75%;
+    }
+    .color {
+      width: 155%;
+  }
+
+    .album h3 {
+      margin-top: 384%;
+      width: 155%;
+    }
+    #wid {
+      width: 155%;
+      height: 38vh;
+  }
+
+    .video iframe {
+      width: 175%;
+      height: 315px;
+      padding: 10px;
+    }
+
+    .footer-col1 {
+      margin-left: 70px;
+      width: 125%;
+      margin-right: -187px;
+    }
+
+    .footer-col {
+      width: 32%;
+      margin-left: 272px;
+      margin-right: -183px;
+    }
+    .footer {
+      width: 155%;
+  }
   }
